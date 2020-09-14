@@ -2,9 +2,14 @@ package main
 
 import "fmt"
 
+const englishHelloPrefix = "Hello "
+
 //Hello stupid linter
 func Hello(name string) string {
-	return "Hello " + name
+	if name == "" {
+		name = "Stranger"
+	}
+	return englishHelloPrefix + name
 }
 
 func main() {
