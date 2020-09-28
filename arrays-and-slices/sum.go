@@ -9,6 +9,16 @@ func Sum(numbers []int) int {
 	return sum
 }
 
+//SumAll returns new slice containing sums of passed in slices
+func SumAll(numbersToSum ...[]int) []int {
+	var sums []int
+
+	for _, numbers := range numbersToSum {
+		sums = append(sums, Sum(numbers))
+	}
+	return sums
+}
+
 func main() {
 
 }
